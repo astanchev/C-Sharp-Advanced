@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BoxOfT
+namespace GenericArrayCreator
 {
     public class StartUp
     {

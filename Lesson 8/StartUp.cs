@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace GenericArrayCreator
+namespace GenericScale
 {
     public class StartUp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }

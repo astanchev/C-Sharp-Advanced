@@ -1,50 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
-namespace _03.Stack
+namespace _04.Froggy
 {
     class Program
     {
         static void Main(string[] args)
         {
-            StackA<string> stack = new StackA<string>();
-            
+            int[] inputStones = Console.ReadLine()
+                                 .Split(", ", StringSplitOptions.RemoveEmptyEntries)
+                                 .Select(int.Parse)
+                                 .ToArray();
 
-            while (true)
-            {
-                string[] input = Console.ReadLine().Split(new char[]{' ',','},
-                                                    StringSplitOptions.RemoveEmptyEntries);
-                if (input[0] == "END")
-                {
-                    break;
-                }
+            Lake lake = new Lake(inputStones);
 
-                string command = input[0];
-                List<string> inputList = input.Skip(1).ToList();
+            Console.WriteLine(string.Join(", ", lake));
 
-                if (command == "Push")
-                {
-                    foreach (var element in inputList)
-                    {
-                        stack.Push(element);
-                    }
-                }
-                else
-                {
-                    stack.Pop();
-                }
-            }
-
-            foreach (var element in stack)
-            {
-                Console.WriteLine(element);
-            }
-            
-            foreach (var element in stack)
-            {
-                Console.WriteLine(element);
-            }
         }
     }
 }

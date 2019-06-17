@@ -154,6 +154,8 @@ namespace _09.CustomLinkedList
             while (currentNode != null)
             {
                 action(currentNode.Value);
+
+                currentNode = currentNode.NextNode;
             }
         }
         private void CheckIfEmptyThrowException()
